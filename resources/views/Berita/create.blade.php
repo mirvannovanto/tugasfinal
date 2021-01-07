@@ -4,7 +4,7 @@
      <div class="card my-4">
         <h5 class="card-header">masukkan berita terbaru</h5>
         <div class="card-body">
-            <form role="form" action="/berita" method="POST" >
+            <form role="form" action="/Berita" method="POST" >
                 @csrf
                 <div class="card-body">
                 <!-- bagian judul berita-->

@@ -17,7 +17,7 @@
 // Route::get('/master', function () {
 //     return view('master');
 // });
-// Route::get('/index', function () {
+// Route::get('/Berita', function () {
 //     return view('index');
 // });
 
@@ -25,10 +25,11 @@
 //     return view('create');
 // });
 
-Route::get('Berita/create', 'BeritaController@create');
-Route::get('Berita/index', 'BeritaController@index');
+Route::get('/Berita/create', 'BeritaController@create');
+Route::post('/Berita', 'BeritaController@store');
+
+Route::get('/Berita/index', 'BeritaController@index');
 
 
-//Route::post('/')
 
-Route::resource('Berita', 'BeritaController');
+//Route::resource('Berita', 'BeritaController');

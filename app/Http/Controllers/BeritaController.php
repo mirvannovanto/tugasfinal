@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\post;
+use DB;
 class BeritaController extends Controller
 {
     /**
@@ -15,7 +16,8 @@ class BeritaController extends Controller
     {
         //menampilkan berita
         $berita = post::all();
-        return view('berita.index', compact('berita'));
+        return view('Berita.index', compact('berita'));
+        //return view('Berita.index');
     }
 
     /**
@@ -37,6 +39,7 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->all());
         //validasi harus diisi
         $request->validate([
             'judul' => 'required',
@@ -49,7 +52,8 @@ class BeritaController extends Controller
             "isi" => $request["isi"],
             "kategori" => $request["kategori"]
         ]);
-        return redirect('/berita')->with('success','Berhasil menambahkan berita!');
+        return redirect('/Berita/index')->with('success','Berhasil menambahkan berita!');
+        //return view('Berita.index');
     }
 
     /**
