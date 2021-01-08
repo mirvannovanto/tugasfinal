@@ -26,7 +26,6 @@
 // });
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
 Route::get('/Berita/create', 'BeritaController@create');
 Route::post('/Berita', 'BeritaController@store');
 
@@ -34,7 +33,7 @@ Route::get('/Berita/index', 'BeritaController@index');
 
 
 Route::get('/', function () {
-    return view('/home');
+    return view('berita.create');
 });
 
 Route:: get('/home','HomeController@home');

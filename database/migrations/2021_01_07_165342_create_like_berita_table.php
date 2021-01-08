@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFailedJobsTable extends Migration
+class CreateLikeBeritaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateFailedJobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('failed_jobs', function (Blueprint $table) {
+        Schema::create('like_berita', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('connection');
-            $table->text('queue');
-            $table->longText('payload');
-            $table->longText('exception');
+            $table->unsignedBigInteger('profile_id');
+            $table->foreign('profile_id')->reference('profile_id')->on('profile');
+            $table->unsignedBigInteger('berita_id');
+            $table->foreign('berita_id')->reference('berita_id')->on('berita');
             $table->timestamp('failed_at')->useCurrent();
         });
     }
@@ -30,6 +30,6 @@ class CreateFailedJobsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('like_berita');
     }
 }
