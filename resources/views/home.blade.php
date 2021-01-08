@@ -40,9 +40,8 @@
 
   <!-- Footer -->
     <!-- Footer -->
-    @extends('headfoot.footer')
-    @section('foot')
-    @endsection
+    @include('headfoot.footer')
+    
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

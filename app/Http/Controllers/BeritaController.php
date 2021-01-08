@@ -80,13 +80,10 @@ class BeritaController extends Controller
     public function edit($id)
     {
         //edit postingan berita
-        $update = post::where('id', $id)->update([
-            "judul" => $request["judul"],
-            "isi" => $request["isi"],
-            "kategori" => $request["kategori"]
-        ]);
 
-        return redirect('/berita')->with('success','Berhasil edit berita!');
+        $berita = post::find($id);
+        return view('berita.edit', compact('berita'));
+        
     }
 
     /**
@@ -98,7 +95,15 @@ class BeritaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //untuk menyimpan hasil editan
+
+        $update = post::where('id', $id)->update([
+            "judul" => $request["judul"],
+            "isi" => $request["isi"],
+            "kategori" => $request["kategori"]
+        ]);
+
+       return redirect('/home')->with('success','Berhasil edit berita!');
     }
 
     /**

@@ -16,10 +16,12 @@
           <h2 class="card-title">{{$kolom->judul}}</h2>
           <p class="card-text">{{$kolom->isi}}</p>
           <a href="/Berita/{{$kolom->id}}" class="btn btn-primary">liat komentar</a>
+          <a href="/Berita/{{$kolom->id}}/edit" class="btn btn-primary">edit</a>
+
         </div>
         <div class="card-footer text-muted">
-          Posted on January 1, 2020 by
-          <a href="#">Start Bootstrap</a>
+         Dibuat pada : {{$kolom->created_at}}
+          <a href="#">Kelompok 10</a>
         </div>
       </div>
       @empty

@@ -12,21 +12,9 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('/master', function () {
-//     return view('master');
-// });
-// Route::get('/Berita', function () {
-//     return view('index');
+//     return view('berita.show');
 // });
 
-// Route::get('/create', function () {
-//     return view('create');
-// });
-// Route::get('/', function () {
-//     return view('/home');
-// }); 
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -34,11 +22,10 @@ Route::get('/Berita/create', 'BeritaController@create');
 Route::post('/Berita', 'BeritaController@store');
 Route::get('/Berita/{id}', 'BeritaController@show');
 Route::get('/Berita/index', 'BeritaController@index');
+Route::get('/Berita/{tanyaID}/edit', 'BeritaController@edit');
+Route::put('/Berita/{tanyaID}', 'BeritaController@update');
 
 
-Route::get('/', function () {
-    return view('berita.show');
-});
 
 
 Route:: get('/home','HomeController@home');
