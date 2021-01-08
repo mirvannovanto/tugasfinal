@@ -65,8 +65,9 @@ class BeritaController extends Controller
     public function show($id)
     {
         //menampilkan berita dan komentar
-        $post = post::find($id);
-        return view('Berita.show', compact('post'));
+        $berita = post::find($id);
+        dd($berita);
+        return view('Berita.show', compact('berita'));
     }
 
     /**

@@ -25,16 +25,14 @@
       @empty
       <td colspan="3" align="center"> <h3> BELUM ADA BERITA MASUK </h3> </td>
       @endforelse
-     
-
-      
-
+        
     </div>
       
      
 
 
     @include('layouts.sidebar')
+    
     <!-- Pagination -->
     <ul class="pagination justify-content-center mb-4">
       <li class="page-item">

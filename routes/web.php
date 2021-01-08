@@ -24,17 +24,22 @@
 // Route::get('/create', function () {
 //     return view('create');
 // });
+// Route::get('/', function () {
+//     return view('/home');
+// }); 
+
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 Route::get('/Berita/create', 'BeritaController@create');
 Route::post('/Berita', 'BeritaController@store');
-
+Route::get('/Berita/{$id}', 'BeritaController@show');
 Route::get('/Berita/index', 'BeritaController@index');
 
 
 Route::get('/', function () {
-    return view('berita.create');
+    return view('berita.show');
 });
+
 
 Route:: get('/home','HomeController@home');
 Route:: get('/about','HomeController@about');
