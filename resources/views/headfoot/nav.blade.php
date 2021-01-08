@@ -36,6 +36,9 @@
             <a class="nav-link text-white" href="/home">Home
               <span class="sr-only">(current)</span>
             </a>
+            <li class="nav-item">
+              <a class="nav-link" href="/Berita/create">Input Berita</a>
+            </li>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="/about">About Us</a>

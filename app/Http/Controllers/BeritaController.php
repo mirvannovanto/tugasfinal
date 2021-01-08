@@ -52,7 +52,7 @@ class BeritaController extends Controller
             "isi" => $request["isi"],
             "kategori" => $request["kategori"]
         ]);
-        return redirect('/Berita/index')->with('success','Berhasil menambahkan berita!');
+        return redirect('home')->with('success','Berhasil menambahkan berita!');
        
     }
 

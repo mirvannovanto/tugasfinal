@@ -24,13 +24,19 @@
                     @enderror
                   </div>
                 <!-- bagian kategori -->
-                  <div class="form-group">
-                    <label for="kategori">kategori</label>
-                    <input type="text" class="form-control" id="kategori" name="kategori" placeholder=" pilih kategori berita">
-                    @error('pertanyaan')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                  </div>
+                <div class="form-group">
+                  <label for="kategori">Kategori</label>  
+              
+                  <select class="form-control" name="kategori">
+                      <option>Technology</option>
+                      <option>Politic</option>
+                      <option>Sport</option>
+                  </select>
+              
+                  @error('pertanyaan')
+                  <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
+                </div>
                   
                  
                   
