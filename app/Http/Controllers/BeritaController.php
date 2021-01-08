@@ -17,7 +17,7 @@ class BeritaController extends Controller
         //menampilkan berita
         $berita = post::all();
         return view('Berita.index', compact('berita'));
-        //return view('Berita.index');
+       
     }
 
     /**
@@ -53,7 +53,7 @@ class BeritaController extends Controller
             "kategori" => $request["kategori"]
         ]);
         return redirect('/Berita/index')->with('success','Berhasil menambahkan berita!');
-        //return view('Berita.index');
+       
     }
 
     /**
@@ -66,7 +66,8 @@ class BeritaController extends Controller
     {
         //menampilkan berita dan komentar
         $berita = post::find($id);
-        dd($berita);
+        // buat ngecek
+        //dd($berita);
         return view('Berita.show', compact('berita'));
     }
 

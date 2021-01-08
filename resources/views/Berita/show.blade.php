@@ -33,22 +33,23 @@
         <hr>
 
         <!-- Comments Form -->
+            
 
-        <form role="form" action="/Berita" method="POST" >
-            @csrf
-            <div class="card-body">
-            <!-- bagian judul berita-->
+        <div class="card my-4">
+          <h5 class="card-header">Berikan Komentar</h5>
+          <div class="card-body">
+            <form role="form" action="/Berita" method="POST" >
               <div class="form-group">
-                <label for="judul">Judul Berita</label>
-                <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul berita">
+                <textarea class="form-control"  name="judul" rows="3"></textarea>
                 @error('judul')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+          </div>
+        </div>
 
-        
         <!-- Single Comment -->
         <div class="media mb-4">
           <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
